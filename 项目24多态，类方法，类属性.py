@@ -66,13 +66,6 @@ cc.print_()
 C.print_()
 print(C.print_())
 
-class D():
-    num = 10
-    def n(cls):
-        cls.num += 1
-d = D()
-d.num
-print(d.num)
 
 
 
