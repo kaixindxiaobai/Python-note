@@ -123,6 +123,9 @@ class J(A, C):
     # 获取私有属性
     def get_money(self):
         return self.__money
+    # 调用私有方法
+    def get_print1(self):
+        self.__print1()
     # 修改私有属性
     def set_money(self, num):
         self.__money = num
@@ -141,5 +144,12 @@ print(k.get_money())
 k.set_money(200)
 print(k.get_money())
 
-
-
+# 调用私有属性和私有方法
+# 方法一：对象名._类名__方法或属性名
+j = J()
+j._J__print1()
+print(j._J__money)
+# 方法二：在类中调用（类里封装函数对私有属性进行调用）
+j.get_print1()
+result = j.get_money()
+print(result)
